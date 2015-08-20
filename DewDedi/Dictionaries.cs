@@ -45,8 +45,8 @@ namespace DewDedi
             //Lobby.Add("Skirmish", "skirmish");
             //Lobby.Add("Spartans vs Elites", "spartans_vs_elites");
             Lobby.Add("Team Swat", "team_swat");
-            Lobby.Add("FFA Odball", "odd_ball");
-            Lobby.Add("Odball", "odd_ball_ffa");
+            Lobby.Add("FFA Oddball", "odd_ball");
+            Lobby.Add("Oddball", "odd_ball_ffa");
             Lobby.Add("Multi Flag", "ctf");
             Lobby.Add("Siege Assault", "assault_siege");
             Lobby.Add("Crazy King", "koth");

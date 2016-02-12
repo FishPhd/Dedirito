@@ -26,12 +26,18 @@ namespace DewDedi
         {
             var Lobby = new Dictionary<string, string>();
             Lobby.Add("Random", "random");
-            Lobby.Add("Guardian", "guardian");
-            Lobby.Add("Valhalla", "riverworld");
             Lobby.Add("Avalanche", "s3d_avalanche");
             Lobby.Add("Edge", "s3d_edge");
-            Lobby.Add("Turf", "s3d_turf");
+            Lobby.Add("Guardian", "guardian");
+            Lobby.Add("High Ground", "deadlock");
+            Lobby.Add("Last Resort", "zanzibar");
+            Lobby.Add("Narrows", "chill");
             Lobby.Add("Reactor", "s3d_reactor");
+            Lobby.Add("Sandtrap", "shrine");
+            Lobby.Add("Standoff", "bunkerworld");
+            Lobby.Add("The Pit", "cyberdyne");
+            Lobby.Add("Turf", "s3d_turf");
+            Lobby.Add("Valhalla", "riverworld");
             return Lobby;
         }
 

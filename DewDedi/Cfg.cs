@@ -100,7 +100,11 @@ namespace DewDedi
                 SetVariable("Server.Mode", "3", ref configFile);
                 SetVariable("Game.Map", "guardian", ref configFile);
                 SetVariable("Game.GameType", "team_slayer", ref configFile);
-                SetVariable("Server.MaxPlayers", "16", ref configFile);
+                SetVariable("Server.MaxPlayers", "10", ref configFile);
+                SetVariable("Server.SprintEnabled", "0", ref configFile);
+                SetVariable("Server.UnlimitedSprint", "0", ref configFile);
+                SetVariable("Server.DualWieldEnabled", "0", ref configFile);
+                SetVariable("Server.AssassinationEnabled", "0", ref configFile);
 
                 Console.WriteLine("New CFG Created");
             }

@@ -63,11 +63,53 @@
                             <TextBox x:Name="TxtMaxPlayers" Margin="10,0,0,0" Height="20"
                                          Text="{Binding ElementName=MaxPlayers,Path=Value}" Width="40" />
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,20,0">
+                            <Label Padding="0,2,10,0" Content="Sprint Enabled:" Width="164"/>
+                            <Slider x:Name="SprintEnabled" Width="50" Value="16"
+                                        Maximum="1" Minimum="0" ValueChanged="SprintEnabled_OnValueChanged"
+                                        IsSnapToTickEnabled="True" TickFrequency="1"
+                                        Style="{DynamicResource FlatSlider}" />
+                            <TextBox x:Name="TxtSprintEnabled" Margin="10,0,0,0" Height="20"
+                                         Text="{Binding Value, ElementName=SprintEnabled}" Width="40" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,20,0">
+                            <Label Padding="0,2,10,0" Width="164">Unlimited Sprint:</Label>
+                            <Slider x:Name="UnlimitedSprint" Width="50" Value="16"
+                                        Maximum="1" Minimum="0" ValueChanged="UnlimitedSprint_OnValueChanged"
+                                        IsSnapToTickEnabled="True" TickFrequency="1"
+                                        Style="{DynamicResource FlatSlider}" />
+                            <TextBox x:Name="TxtUnlimitedSprint" Margin="10,0,0,0" Height="20"
+                                         Text="{Binding ElementName=UnlimitedSprint,Path=Value}" Width="40" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,20,0">
+                            <Label Padding="0,2,10,0" Width="164">DualWield Enabled:</Label>
+                            <Slider x:Name="DualWieldEnabled" Width="50" Value="16"
+                                        Maximum="1" Minimum="0" ValueChanged="DualWieldEnabled_OnValueChanged"
+                                        IsSnapToTickEnabled="True" TickFrequency="1"
+                                        Style="{DynamicResource FlatSlider}" />
+                            <TextBox x:Name="TxtDualWieldEnabled" Margin="10,0,0,0" Height="20"
+                                         Text="{Binding ElementName=DualWieldEnabled,Path=Value}" Width="40" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,20,0">
+                            <Label Padding="0,2,10,0" Width="164">Assassination Enabled:</Label>
+                            <Slider x:Name="AssassinationEnabled" Width="50" Value="16"
+                                        Maximum="1" Minimum="0" ValueChanged="AssassinationEnabled_OnValueChanged"
+                                        IsSnapToTickEnabled="True" TickFrequency="1"
+                                        Style="{DynamicResource FlatSlider}" />
+                            <TextBox x:Name="TxtAssassinationEnabled" Margin="10,0,0,0" Height="20"
+                                         Text="{Binding ElementName=AssassinationEnabled,Path=Value}" Width="40" />
+                        </StackPanel>
                     </StackPanel>
 
                 </TabItem>
                 <TabItem Header="Cfg">
-                    <Grid></Grid>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <Label x:Name="test">: </Label>
+                        </StackPanel>
+
+
+                    </Grid>
                 </TabItem>
                 <TabItem Header="Debug">
                     <Grid>
@@ -75,12 +117,12 @@
                             <Label x:Name="RamUsage">Available Memory: Loading</Label>
                             <Label x:Name="ServerUptime">Server Uptime: 0d 0h 0m 0s</Label>
                         </StackPanel>
-                        
+
 
                     </Grid>
                 </TabItem>
             </TabControl>
-            
+
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Width="300" VerticalAlignment="Top" Margin="0,70,0,0" Stretch="None">
                 <Canvas Name="Layer_1" Width="258.84" Height="225.01" Canvas.Left="0" Canvas.Top="0">
                     <Canvas.RenderTransform>

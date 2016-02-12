@@ -96,6 +96,10 @@ namespace DewDedi
             rcon.DewCmd("Game.Gametype " + CmbGameGametype.SelectedValue);
 
             rcon.DewCmd("Server.MaxPlayers " + MaxPlayers.Value);
+            rcon.DewCmd("Server.SprintEnabled " + SprintEnabled.Value);
+            rcon.DewCmd("Server.UnlimitedSprint " + UnlimitedSprint.Value);
+            rcon.DewCmd("Server.DualWieldEnabled " + DualWieldEnabled.Value);
+            rcon.DewCmd("Server.AssassinationEnabled " + AssassinationEnabled.Value);
 
             rcon.DewCmd("Game.Start");
         }
@@ -154,6 +158,10 @@ namespace DewDedi
             CmbServerMap.SelectedValue = Cfg.configFile["Game.Map"];
             CmbGameGametype.SelectedValue = Cfg.configFile["Game.GameType"];
             MaxPlayers.Value = Convert.ToDouble(Cfg.configFile["Server.MaxPlayers"]);
+            SprintEnabled.Value = Convert.ToDouble(Cfg.configFile["Server.SprintEnabled"]);
+            UnlimitedSprint.Value = Convert.ToDouble(Cfg.configFile["Server.UnlimitedSprint"]);
+            DualWieldEnabled.Value = Convert.ToDouble(Cfg.configFile["Server.DualWieldEnabled"]);
+            AssassinationEnabled.Value = Convert.ToDouble(Cfg.configFile["Server.AssassinationEnabled"]);
         }
 
         private double CurrentRamusage()
@@ -223,6 +231,38 @@ namespace DewDedi
             if (!IsLoaded)
                 return;
             Cfg.SetVariable("Server.MaxPlayers", Convert.ToString(MaxPlayers.Value), ref Cfg.configFile);
+            Cfg.SaveConfigFile("server.cfg", Cfg.configFile);
+        }
+
+        private void SprintEnabled_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (!IsLoaded)
+                return;
+            Cfg.SetVariable("Server.SprintEnabled", Convert.ToString(SprintEnabled.Value), ref Cfg.configFile);
+            Cfg.SaveConfigFile("server.cfg", Cfg.configFile);
+        }
+
+        private void UnlimitedSprint_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (!IsLoaded)
+                return;
+            Cfg.SetVariable("Server.UnlimitedSprint", Convert.ToString(UnlimitedSprint.Value), ref Cfg.configFile);
+            Cfg.SaveConfigFile("server.cfg", Cfg.configFile);
+        }
+
+        private void DualWieldEnabled_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (!IsLoaded)
+                return;
+            Cfg.SetVariable("Server.DualWieldEnabled", Convert.ToString(DualWieldEnabled.Value), ref Cfg.configFile);
+            Cfg.SaveConfigFile("server.cfg", Cfg.configFile);
+        }
+
+        private void AssassinationEnabled_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (!IsLoaded)
+                return;
+            Cfg.SetVariable("Server.AssassinationEnabled", Convert.ToString(AssassinationEnabled.Value), ref Cfg.configFile);
             Cfg.SaveConfigFile("server.cfg", Cfg.configFile);
         }
     }
